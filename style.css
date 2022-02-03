@@ -1,0 +1,42 @@
+#form {
+    margin: 0 auto;
+    width: 40%;
+    padding: 1rem;
+    border: 4px solid rgb(167, 0, 167);
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#inputText {
+    width: 70%;
+}
+
+
+#todo {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    border: 4px solid rgb(3, 43, 219);
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: 2px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: rgba(111, 174, 255, 0.4);
+}
+
+
+.card_done {
+    text-decoration: line-through;
+}

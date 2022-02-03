@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../4_hw_ToDo/style.css">
+    <link rel="stylesheet" href="../4_hw_ToDo/modal.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id = form>
+        <input type="text" id="inputText">
+        <button id="btnSubmit">Submit</button>
+        <button id="btnClearAll">Clear All</button>
+    </form>
+
+    <div id="todo"></div>
+
+
+
+    <!-- Модальный -->
+    <div id="myModal" class="modal">
+
+        <!-- Модальное содержание -->
+        <div class="modal-content">
+            <form>
+                <input id="inputModal" type="text">
+                <button id="btnModalOk">OK</button>
+            </form>
+            <span class="close">&times;</span>
+        </div>
+    
+    </div>
+
+    <script src="../4_hw_ToDo/app.js"></script>
+</body>
+</html>
