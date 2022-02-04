@@ -17,22 +17,20 @@ const getIndex = (data) => {
     const cardId = +card.id;
     const cardIndex = data.findIndex(item => item.id === cardId);
     return cardIndex;
-}
+};
 
 const init = () => { 
     const form = document.querySelector('#form');
     const inputText = document.querySelector('#inputText');
     const btnSubmit = document.querySelector('#btnSubmit');
     const todo = document.querySelector('#todo');
-    const btnClearAll = document.querySelector('#btnClearAll')
-    const modal = document.querySelector('#myModal')
-
-    const close = document.querySelector('.close')
-    const inputModal = document.querySelector('#inputModal')
-    const btnModalOk = document.querySelector('#btnModalOk')
+    const btnClearAll = document.querySelector('#btnClearAll');
+    const modal = document.querySelector('#myModal');
+    const close = document.querySelector('.close');
+    const inputModal = document.querySelector('#inputModal');
+    const btnModalOk = document.querySelector('#btnModalOk');
 
     const data = [];
-
     let indexInData;
 
     btnSubmit.addEventListener('click', (event) =>{
@@ -69,11 +67,11 @@ const init = () => {
             const description = data[getIndex(data)].title
             inputModal.value = description;
             indexInData = getIndex(data)
-        }
+        };
     });
     close.addEventListener('click', () => {
         modal.style.display = 'none'
-    })
+    });
     btnModalOk.addEventListener('click', (event) => {
         event.preventDefault();
         const description = inputModal.value
@@ -81,10 +79,9 @@ const init = () => {
         data.splice(indexInData, 1, {
             ...el,
             title: description
-        })
+        });
         update(data);
-        modal.style.display = 'none'
-    })
-
+        modal.style.display = 'none';
+    });
 };
 init();
